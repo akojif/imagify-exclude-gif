@@ -6,11 +6,26 @@
 
 ## Installation
 
+### Via WordPress Admin:
+
 1. Download the latest release of the plugin from the [Releases](https://github.com/akojif/imagify-exclude-gif/releases) page.
-2. Upload the plugin ZIP file to your WordPress site.
-3. Navigate to the WordPress admin area and go to Plugins -> Add New.
-4. Click the "Upload Plugin" button and select the plugin ZIP file you downloaded.
-5. Click "Install Now" and then "Activate Plugin".
+2. Navigate to your WordPress admin area.
+3. Go to Plugins -> Add New.
+4. Click the "Upload Plugin" button.
+5. Select the plugin ZIP file you downloaded in step 1.
+6. Click "Install Now" and then "Activate Plugin".
+
+### Via SSH/SFTP:
+
+1. Download the latest release of the plugin from the [Releases](https://github.com/akojif/imagify-exclude-gif/releases) page.
+2. Upload the plugin ZIP file to your WordPress site using SSH or SFTP.
+3. Access your WordPress site's directory on the server.
+4. Navigate to the `wp-content/plugins` directory.
+5. Upload the plugin ZIP file to this directory.
+6. Extract the contents of the ZIP file.
+7. Log in to your WordPress admin area.
+8. Go to Plugins.
+9. Find the plugin in the list and click "Activate".
 
 ## Usage
 
@@ -18,7 +33,7 @@ Once the plugin is activated, it automatically integrates with the Imagify plugi
 
 ## Testing
 
-To test the plugin, you can use PHPUnit along with the WordPress testing framework. The `tests` directory contains test cases for various aspects of the plugin, including activation, deactivation, and custom function behavior.
+To test the plugin, you can use PHPUnit along with the WordPress testing framework. The `tests` directory contains test cases for various aspects of the plugin, including activation, deactivation, and skipping conversion of GIF to WebP.
 
 To run the tests, follow these steps:
 
