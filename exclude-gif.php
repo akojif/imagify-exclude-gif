@@ -1,13 +1,19 @@
 <?php
-/*
-Plugin Name: Imagify - Exclude GIF Extension
-Description: This plugin extends Imagify by excluding GIF images from WebP conversion.
-Plugin URI: https://github.com/akojif/imagify-exclude-gif
-Version: 1.0
-Author: Francis Akoji
-Author URI: https://francisakoji.com
-Requires PHP: 7.2
-*/
+/** 
+
+ * Plugin Name: Imagify - Exclude GIF Extension
+ * Description: This plugin extends Imagify by excluding GIF images from WebP conversion.
+ * Plugin URI: https://github.com/akojif/imagify-exclude-gif
+ * Version: 1.0
+ * Requires at least: 5.3
+ * Requires PHP: 7.2
+ * Author: Francis Akoji
+ * Author URI: https://francisakoji.com
+ * Text Domain: imagify-exclude-gif
+
+**/
+
+defined( 'ABSPATH' ) || die( 'What are you up to?' );
 
 add_action( 'admin_init', 'check_imagify_status_on_activation' );
 
@@ -32,5 +38,3 @@ function imagify_not_activated_notice() {
 require_once plugin_dir_path( __FILE__ ) . 'includes/webp-gif.php';
 
 add_filter( 'imagify_before_optimize_size', 'no_webp_for_gif', 10, 7 );
-
-?>
